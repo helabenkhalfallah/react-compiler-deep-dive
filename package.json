@@ -8,11 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "analyze": "ANALYZE=true pnpm build"
   },
   "dependencies": {
     "@ant-design/icons": "=5.5.1",
     "@ant-design/nextjs-registry": "=1.0.1",
+    "@next/bundle-analyzer": "^15.0.3",
     "antd": "=5.22.1",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
