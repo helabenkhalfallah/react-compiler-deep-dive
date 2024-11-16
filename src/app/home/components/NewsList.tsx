@@ -50,6 +50,7 @@ export function NewsList({
                             alt={news.title}
                             src={
                                 news.urlToImage ||
+                                news.thumbnail ||
                                 'https://fakeimg.pl/600x400/e6e6e6/d9d9d9?text=No+image'
                             }
                             width={250}

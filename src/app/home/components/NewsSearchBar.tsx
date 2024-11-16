@@ -1,12 +1,12 @@
 import { Input } from 'antd';
-import React, { memo } from 'react';
+import React from 'react';
 
 interface NewsSearchBardProps {
     searchQuery: string;
     handleSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const NewsSearchBar = memo(({ searchQuery, handleSearchChange }: NewsSearchBardProps) => {
+const NewsSearchBar = ({ searchQuery, handleSearchChange }: NewsSearchBardProps) => {
     return (
         <div
             style={{
@@ -29,7 +29,7 @@ const NewsSearchBar = memo(({ searchQuery, handleSearchChange }: NewsSearchBardP
             />
         </div>
     );
-});
+};
 
 NewsSearchBar.displayName = 'NewsSearchBar';
 

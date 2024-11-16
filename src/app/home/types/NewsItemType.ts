@@ -1,7 +1,8 @@
 export interface NewsItemType {
     title: string;
     description: string;
-    urlToImage: string;
+    urlToImage?: string;
+    thumbnail?: string;
     publishedAt: string;
     author: string;
 }
