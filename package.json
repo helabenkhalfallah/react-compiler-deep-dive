@@ -1,0 +1,33 @@
+{
+  "name": "react-compiler-deep-dive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write src"
+  },
+  "dependencies": {
+    "@ant-design/icons": "=5.5.1",
+    "@ant-design/nextjs-registry": "=1.0.1",
+    "antd": "=5.22.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "=4.3.0",
+    "@types/node": "=20",
+    "@types/react": "=18",
+    "@types/react-dom": "=18",
+    "babel-plugin-react-compiler": "19.0.0-beta-a7bf2bd-20241110",
+    "eslint": "=8",
+    "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "=9.1.0",
+    "prettier": "=3.3.2",
+    "typescript": "=5"
+  }
+}
