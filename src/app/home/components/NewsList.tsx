@@ -1,7 +1,7 @@
 import { NewsItemType } from '@/app/home/types/NewsItemType';
 import { Button, List } from 'antd';
 import Image from 'next/image';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 interface NewsListProps {
     newsList: NewsItemType[];
@@ -18,13 +18,15 @@ export function NewsList({
     openModal,
     searchQuery,
 }: NewsListProps) {
-    const filteredNews = newsList
-        .filter((item) => item.title && !item.title.includes('Removed'))
-        .filter(
-            (item) =>
-                item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.description.toLowerCase().includes(searchQuery.toLowerCase()),
-        );
+    const filteredNews = useMemo(() => {
+        return newsList
+            .filter((item) => item.title && !item.title.includes('Removed'))
+            .filter(
+                (item) =>
+                    item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    item.description.toLowerCase().includes(searchQuery.toLowerCase()),
+            );
+    }, [newsList, searchQuery]);
 
     return (
         <List
