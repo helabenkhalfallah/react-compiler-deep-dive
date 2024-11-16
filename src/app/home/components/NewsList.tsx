@@ -19,7 +19,7 @@ export function NewsList({
     searchQuery,
 }: NewsListProps) {
     const filteredNews = useMemo(() => {
-        return newsList
+        return (newsList || [])
             .filter((item) => item.title && !item.title.includes('Removed'))
             .filter(
                 (item) =>
