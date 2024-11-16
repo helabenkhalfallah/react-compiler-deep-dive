@@ -1,6 +1,7 @@
 import { Segmented } from 'antd';
+import { memo } from 'react';
 
-const NewsFilterView = ({ onFilterChange }: { onFilterChange: (value: string) => void }) => {
+const NewsFilterView = memo(({ onFilterChange }: { onFilterChange: (value: string) => void }) => {
     return (
         <Segmented
             block
@@ -10,7 +11,7 @@ const NewsFilterView = ({ onFilterChange }: { onFilterChange: (value: string) =>
             onChange={onFilterChange}
         />
     );
-};
+});
 
 NewsFilterView.displayName = 'NewsFilterView';
 

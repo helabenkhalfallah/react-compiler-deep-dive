@@ -62,7 +62,7 @@ const HomeView: React.FC = () => {
     }, []);
 
     // Handle search input with transition
-    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setSearchQuery(value);
 
@@ -70,12 +70,12 @@ const HomeView: React.FC = () => {
         startTransition(() => {
             setDeferredQuery(value);
         });
-    };
+    }, []);
 
     // Handle filter change
-    const handleFilterChange = (value: string) => {
+    const handleFilterChange = useCallback((value: string) => {
         setFilterQuery(value);
-    };
+    }, []);
 
     return (
         <div>
