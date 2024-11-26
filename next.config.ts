@@ -8,16 +8,7 @@ const withBundleAnalyzer = BundleAnalyzer({
 const nextConfig: NextConfig = {
   /* config options here */
     experimental: {
-       reactCompiler: true,
-    },
-    async redirects() {
-        return [
-            {
-                source: '/',
-                destination: '/home',
-                permanent: true,
-            },
-        ];
+        reactCompiler: true,
     },
     images: {
         remotePatterns: [
